@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  jupyter:
+    build: .
+    working_dir: /notebooks
+    volumes:
+      - ./notebooks:/notebooks
+      - ./data:/data
+    ports:
+      - "8888:8888"
